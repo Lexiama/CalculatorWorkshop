@@ -17,7 +17,7 @@ function calculateBtnclicked (){
   const duration = Number(document.getElementById ("inputLoanLength").value);
   calculateMorgage (principal, interestRate, duration)
 
-  //  Typeof helps see to dataTypes
+  //  Typeof helps see to dataTypes (NOT NEEDED BUT USEFUL)
  console.log(principal)
  console.log(typeof principal);
  console.log (interestRate)

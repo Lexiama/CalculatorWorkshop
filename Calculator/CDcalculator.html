@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FinacialBuddy!</title>
+
+    <!--BOOTSTRAP STYLESHEET-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+    
+  </head>
+ 
+    <!--NAVBAR-->
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">FinacialBuddy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="CDcalculator.html">Future Values Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mortgage.html">Mortgage Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="miniProject/miniProject">Temperture Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AnnuityCalcu.html">Annuity Calculator</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!--NAVBAR END-->
+
+
+    
+    <main class="container">
+        <h1>CD Calculator</h1>
+        <div class="col-sm-4 mb-3">
+            <label for="intialInput" class="form-label">Initial Deposit: $</label>
+            <input type="text" id="inputDeposit" class="form-control">
+        </div>
+        <div class="col-sm-4 mb-3">
+              <!-- instead of term (months) i will use Number of years -->
+            <label for="termInput" class="form-label">Number of years: </label> 
+            <input type="text" id="inputYears" class="form-control">
+        </div>
+        <div class="col-sm-4 mb-3">
+            <label for="intialInput" class="form-label">Annual Interest Rate: %</label>
+            <input type="text" id="inputInterest" class="form-control">
+        </div>
+        <div class="col-sm-4 mb-2 g-3">
+            <label for="intialInput" class="form-label">Compounding Frequency: </label>
+            <select class="form-select col-sm-6" id="compoundSelect">
+                <option selected value="monthly"> Daily</option>
+                <option selected value="monthly"> monthly</option>
+                <option selected value="monthly"> Yearly</option>
+            </select>
+            <!-- <input type="text" class="form-control"> -->
+        </div>
+        <div class="col-sm-4 mb-3">
+          <label for="outputFutureValue" class="form-label">Future value</label>
+          <input type="output" id="outputFutureValue" class="form-control" readonly>
+      </div>
+        <div class="col-sm-4 mb-3">
+          <label for="outputInterestEarned" class="form-label">Total interest earned</label>
+          <input type="output" id="outputInterestEarned" class="form-control" readonly>
+      </div>
+        <div class="button">
+            <button class="btn btn-secondary mb-2" id="clearBtn" type="button">Clear</button> 
+            <button class="btn btn-secondary mb-2" id="calculateBtn" type="button">Calculate</button>
+        </div>
+      </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script src="scripts/CDcalculator.js"></script>
+</body>
+
+</html>
+
+  
