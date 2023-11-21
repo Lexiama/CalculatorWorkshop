@@ -1,44 +1,31 @@
-"use strict"
+"use strict";
 
 window.onload = init;
 
-function init () {
-
-const calculateBtn =  document.getElementById("calculateBtn")
-calculateBtn.onclick = calculateBtnClick;
+function init(){
+    const buttonCalculate = document.getElementById("buttonCalculate");
+    buttonCalculate.onclick = buttonCalculateClick;
 }
 
-// input
-
-function calculateBtnClick (){
-
-    const inputPayment = parseFloat(document.getElementById("inputPayment").value); //PMT
+function buttonCalculateClick(){
+        
+    const inputPayment = parseFloat(document.getElementById("inputPayment").value); // PMT
     const inputInterest = parseFloat(document.getElementById("inputInterest").value);
-    const inputYears = parseFloat( document.getElementById("inputYears").value); //r
+    const inputYears = parseFloat(document.getElementById("inputYears").value);
 
+       
+    let annualInterestRateInDecimal = (inputInterest / 100);
+    let monthlyInterestRate = (annualInterestRateInDecimal / 12);
 
-    // calculation 
+    let numberOfMonth = inputYears * 12; 
 
-   //convert to intrest rate from % to decimal 
+    let presentValue = inputPayment * 
+        (
+            (1-(1 + monthlyInterestRate)** (- numberOfMonth)) / monthlyInterestRate
 
-   let annualInterestRateinDecimal = (inputInterest / 100);
-   let monthlyIntrestRate = (annualInterestRateinDecimal / 12 ); // r
+        );
 
-   let numberOfMonths= (inputYears* 12) // n
+    let outputPresentValue = document.getElementById("outputPresentValue");
 
-   let presentValue = inputPayment *  
-   (
-   
-   (1-(1 + monthlyIntrestRate)**(numberOfMonths)) / monthlyIntrestRate 
-
-   );
-   
-   
-
-
-// Output 
-
-let outputPresentValue = document.getElementById ("outputPresentValue");
-outputPresentValue.value = presentValue;
-
-   }
+    outputPresentValue.value = presentValue.toFixed(2);
+}
